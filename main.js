@@ -172,26 +172,12 @@
 // let result = getInverseNumber(n);
 // console.log(`Natija: ${result}`);
 
-// String13
+// // String13
 
-// let expression = "7+3-2";
-// function arithmetic(expression) {
-//   expression = expression.replace(/\s+/g, "");
-//   let parts = expression.split("±");
-//   let result = parseInt(parts[0]);
-//   for (let i = 1; i < parts.length; i++) {
-//     let operator = expression[2 * i - 1];
-//     let operand = parseInt(parts[i]);
-//     if (operator === "+") {
-//       result += operand;
-//     } else if (operator === "-") {
-//       result -= operand;
-//     }
+// function calc(str) {
+//     return eval(str);
 //   }
-//   return result;
-// }
-// let result = arithmetic(expression);
-// console.log(`Ifoda qiymati: ${result}`);
+//   +console.log(calc('7+3-2'));
 
 // // String14
 
@@ -224,3 +210,214 @@
 // }
 // let result = doubleChar(s, c);
 // console.log(`Natija: ${result}`);
+
+// // STRING16
+
+// let s1 = "Hello World";
+// let c = "o";
+// let s2 = "123";
+// function insertStr(s1, c, s2) {
+//   let result = "";
+//   for (let char of s1) {
+//     if (char === c) {
+//       result += s2;
+//     }
+//     result += char;
+//   }
+//   return result;
+// }
+// let result = insertStr(s1, c, s2);
+// console.log(`Natija: ${result}`);
+
+// // STRING17
+
+// let s1 = "ababab";
+// let s2 = "ab";
+// function countO(s1, s2) {
+//     let count = 0;
+//     let i = -1;
+//     while ((i = s1.indexOf(s2, i + 1)) !== -1) {
+//         count++;
+//     }
+//     return count;
+// }
+// let result = countO(s1, s2);
+// console.log(`s2 s1 ning ichida ${result} marta takrorlanadi.`);
+
+// // STRING18
+
+// let s1 = "Hello World";
+// let s2 = "lo";
+// function removeFirst(s1, s2) {
+//     let i = s1.indexOf(s2);
+//     if (i !== -1) {
+//         return s1.substring(0, i) + s1.substring(i + s2.length);
+//     } else {
+//         return s1;
+//     }
+// }
+// let result = removeFirst(s1, s2);
+// console.log(`Natija: ${result}`);
+
+// // STRING19
+// let s1 = "ababab";
+// let s2 = "ab";
+// function removeOccurrences(s1, s2) {
+//     let result = s21;
+//     while (result.includes(s2)) {
+//         result = result.replace(s2, '');
+//     }
+//     return result;
+// }
+// let result = removeOccurrences(s1, s2);
+// console.log(`Natija: ${result}`);
+
+// // STRING20
+
+// let s1 = "Hello World";
+// let s2 = "lo";
+// let s3 = "123";
+// function replaceFirst(s1, s2, s3) {
+//   let i = s1.indexOf(s2);
+//   if (i !== -1) {
+//     return s1.substring(0, i) + s3 + s1.substring(index + s2.length);
+//   } else {
+//     return s1;
+//   }
+// }
+// let result = replaceFirst(s1, s2, s3);
+// console.log(`Natija: ${result}`);
+
+// // String21
+
+// let s1 = "Hello World";
+// let s2 = "o";
+// let s3 = "123";
+// function replaceLast(s1, s2, s3) {
+//     let i = s1.lastIndexOf(s2);
+//     if (i !== -1) {
+//         return s1.substring(0, i) + s3 + s1.substring(i + s2.length);
+//     } else {
+//         return s1;
+//     }
+// }
+// let result = replaceLast(s1, s2, s3);
+// console.log(`Natija: ${result}`);
+
+// // STRING22
+
+// let inputStr = "Maqsadjon is the best Developer";
+// function findFirstLastWords(inputStr) {
+//     let words = inputStr.split(' ');
+//     let firstWord = words[0];
+//     let lastWord = words[words.length - 1];
+//     return {
+//         firstWord: firstWord,
+//         firstWord: lastWord
+//     };
+// }
+// let result = findFirstLastWords(inputStr);
+// console.log(`Birinchi so'z: ${result.firstWord}`);
+// console.log(`Oxirgi so'z: ${result.lastWord}`);
+
+// // STRING23
+
+// let inputStr = "Anavi Ananas Antiqa ekan";
+// function findWords(inputStr) {
+//   let words = inputStr.split(" ");
+//   let resultWords = words.filter(
+//     (word) => (word.match(/A/g) || []).length === 2
+//   );
+//   return resultWords;
+// }
+// let result = findWords(inputStr);
+// console.log(`2 ta 'A' harfi bor so'zlar: ${result}`);
+
+// // STRING24
+
+// let inputStr = "Maqsadjon is the best Developer";
+// function getMaxOfString(str) {
+//   let words = str.split(" ");
+//   let maxLength = 0;
+//   let maxWord = "";
+//   for (let word of words) {
+//     if (word.length > maxLength) {
+//       maxLength = word.length;
+//       maxWord = word;
+//     }
+//   }
+//   return maxWord;
+// }
+// let result = getMaxOfString(inputStr);
+// console.log(`Eng uzun so'z: ${result}`);
+
+// // STRING25
+
+// let inputString = "Dunyo seni tog'angmas";
+// function separateWords(str) {
+//   let words = str.split(" ");
+//   let result = words.join(".");
+//   return result;
+// }
+// let result = separateWords(inputString);
+// console.log(`so'zlarni nuqta bilan ajratilgani: ${result}`);
+
+// // STRING26
+
+// let inputString = "dunyo meni ham tog'am emas";
+// function upperCase(str) {
+//     let words = str.split(' ');
+//     let resultWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+//     let result = resultWords.join(' ');
+//     return result;
+// }
+// let result = upperCase(inputString);
+// console.log(`So'zlarni bosh harf bilan yozilgani: ${result}`);
+
+// // STRING27
+
+// let inputStr = `o'zbekiston "buyuk" davlat! o'zbekistonni alishmasman, boshqa jahonga o'zbekiston tengdur o'zbekistonga?`;
+// let belgi;
+// let str = 0;
+// function countMarks(str) {
+//   let marks = [".", ",", ";", ":", "?", "!", "-", "'", '"', "(", ")"];
+//   for (i = 0; i <= marks.length; i++) {
+//     if (belgi == marks[i]) {
+//       str++;
+//       return str;
+//     }
+//   }
+// }
+// console.log(`Stringdagi tinish belgilari soni: ${str}`);
+
+// STRING28
+
+// function getFileName(path) {
+//   let firstIndex = path.lastIndexOf('/');
+//   let lastIndex = path.lastIndexOf('.');
+//   return path.slice(firstIndex + 1, lastIndex);
+// }
+// console.log(getFileName('D:/Qudrat_c++/books/My_book.exe'));
+
+// // STRING29
+
+// function getFileName(path) {
+//   let name = path.slice(path.lastIndexOf(".") + 1);
+//   return name;
+// }
+// console.log(getFileName("D:/Qudrat_c++/books/My_book.exe"));
+
+// ARROW FUNCTION DA ISHLANGANI
+
+// const getFileName = (path) => path.slice(path.lastIndexOf('.') + 1);
+
+// console.log(getFileName('D:/Qudrat_c++/books/My_book.exe'));
+
+// //STRING30
+
+// function getLastFolderName(path) {
+//   let lastIndex = path.lastIndexOf('/');
+//   let firstIndex = path.slice(0, lastIndex).lastIndexOf('/');
+//   return path.slice(firstIndex + 1, lastIndex);
+// }
+// console.log(getLastFolderName('D:/Qudrat_c++/books/My_book.exe'));
